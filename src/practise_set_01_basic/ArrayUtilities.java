@@ -18,6 +18,16 @@ public class ArrayUtilities {
 		System.out.print("Sorted Array : ");
 		Arrays.sort(array);
 		printArray(array);
+		
+		//System.arraycopy(source-array, source-index, dest-array, dest-index, length-to-copy);
+		int[] copyArray = new int[10]; 
+		System.arraycopy(array, 4, copyArray, 4, 3);
+		System.out.print("Copy Array : ");
+		printArray(copyArray);
+		
+		System.arraycopy(copyArray, 4, copyArray, 0, 2);
+		System.out.print("Copy Array : ");
+		printArray(copyArray);
 	}
 	
 	private void printArray(int[] array) {
