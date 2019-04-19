@@ -1,6 +1,8 @@
 package practise_set_01_basic;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 
 public class ArrayUtilities {
@@ -37,7 +39,26 @@ public class ArrayUtilities {
 		printArray(copyArray);
 		System.out.println("Is Equal?:  " + Arrays.equals(array, copyArray));
 		// Note : To compare multidimensional Array Use Arrays.equals(a, b)
- 		
+		
+		
+		// Building List From Array
+		String[] wordsAr = new String[] {"Red", "Green", "Blue", "White"};
+		List<String> wordlistTemp = Arrays.asList(wordsAr);
+		System.out.print("List is : ");
+		printList(wordlistTemp);
+		//wordlistTemp.add("BLACK"); // This Wont Run because its not actually a List
+		List<String> wordlist2 = new ArrayList<String>(wordlistTemp);
+		wordlist2.add("BLACK");
+		System.out.print("Again List is : ");
+		printList(wordlist2);
+	}
+	
+	
+	private void printList(List<String> list) {
+		for(String str: list) {
+			System.out.print(str + " ");
+		}
+		System.out.println();
 	}
 	
 	private void printArray(int[] array) {
