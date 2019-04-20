@@ -1,9 +1,13 @@
 package practise_set_02_unit_testing;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 
+/**
+ * @author apurba
+ *
+ */
 public class CalculatorTest {
 
 	@Test
@@ -14,7 +18,7 @@ public class CalculatorTest {
 		
 		int actual = cal.add(a, b);
 		
-		org.junit.Assert.assertEquals(13, actual);
+		assertEquals(13, actual);
 	}
 	
 	@Test
@@ -26,5 +30,4 @@ public class CalculatorTest {
 		
 		org.junit.Assert.assertEquals(15, actual);
 	}
-
 }
